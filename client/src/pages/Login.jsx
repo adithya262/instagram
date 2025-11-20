@@ -13,7 +13,8 @@ export default function Login({ onLoginSuccess, onSignUpClick }) {
     setLoading(true)
 
     try {
-      const res = await fetch('http://localhost:4000/api/login', {
+      const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:4000';
+      const res = await fetch(`${API_BASE}/api/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
