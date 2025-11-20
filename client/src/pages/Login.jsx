@@ -13,8 +13,7 @@ export default function Login({ onLoginSuccess, onSignUpClick }) {
     setLoading(true)
 
     try {
-      const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:4000';
-      const res = await fetch(`${API_BASE}/api/login`, {
+      const res = await fetch(`https://instagram-mlpe.onrender.com/api/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })

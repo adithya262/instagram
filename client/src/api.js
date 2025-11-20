@@ -1,4 +1,5 @@
-export const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:4000';
+// Using production URL directly to ensure it works in all environments
+export const API_BASE = 'https://instagram-mlpe.onrender.com';
 
 export async function fetchPosts() {
   const res = await fetch(`${API_BASE}/api/posts`);
