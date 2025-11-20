@@ -39,10 +39,12 @@ Replace `YOUR_USERNAME` with your GitHub username.
 ```
 Name: instagram-clone-api
 Environment: Node
-Build Command: npm install
-Start Command: node index.js
+Build Command: cd server && npm install
+Start Command: cd server && node index.js
 Region: Choose closest to you
 ```
+
+**⚠️ IMPORTANT**: The `cd server &&` prefix is required!
 
 ### 2.4 Deploy
 - Click **"Create Web Service"**

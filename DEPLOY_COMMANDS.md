@@ -28,10 +28,12 @@ git push -u origin main
 ```
 Name: instagram-clone-api
 Environment: Node
-Build Command: npm install
-Start Command: node index.js
+Build Command: cd server && npm install
+Start Command: cd server && node index.js
 Region: Singapore (or closest to you)
 ```
+
+**IMPORTANT**: Make sure to set the build and start commands as shown above!
 
 ### Add Environment Variables
 ```
