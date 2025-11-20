@@ -7,7 +7,16 @@ const crypto = require('crypto');
 const db = require('./db');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',  // Local development
+    'https://instagram-clone-691ebe.netlify.app',  // Your Netlify URL
+    'https://instagram-mlpe.onrender.com'  // Your Render URL
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 
 const UPLOAD_DIR = path.join(__dirname, 'uploads');
