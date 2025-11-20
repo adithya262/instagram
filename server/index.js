@@ -10,7 +10,8 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',  // Local development
-    'https://instagram-clone-691ebe.netlify.app',  // Your Netlify URL
+    'https://insta-gram-web.netlify.app',  // New Netlify URL
+    'https://instagram-clone-691ebe.netlify.app',  // Old Netlify URL
     'https://instagram-mlpe.onrender.com'  // Your Render URL
   ],
   credentials: true,
